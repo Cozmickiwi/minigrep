@@ -19,7 +19,7 @@ impl Config {
         Ok(Config {
             query,
             file_path,
-            ignore_case
+            ignore_case,
         })
     }
 }
@@ -44,7 +44,7 @@ pub fn search<'a>(
     let mut results = Vec::new();
     for line in contents.lines() {
         if line.contains(query) {
-           results.push(line);
+            results.push(line);
         }
     }
     results
